@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Presença{% endblock %}
+
+{% block content %}
+    <div class="offset-1 col-10 list-div">
+        <h1>Lista de Alunos</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+        </form>
+        </div>
+        <div class="offset-1 col-9 search-div">
+            <form method="get" id="search-form">
+                <input class="form-control" type="text" id="search" name="search" placeholder="Digite o nome do aluno" value="{{ request.GET.search }}">
+                <i class='fas fa-search' id="search-btn"></i>
+            </form>
+        </div>    
+            <br>
+            {% if messages %}
+                <ul class="messages">
+                    {% for  message in messages %}
+                        <li {% if message.tag %}class="alert-alert-{{message.tag}}"{% endif %}>{{ message }}</li> 
+                    {% endfor %}    
+                </ul>
+            {% endif %}
+            <ul class="lists" >
+            {% for reuniao in reuniao %}
+            {% if reuniao.ausente == 'ausente' %}
+                <li class="offset-1 col-12 alunos">
+            {% else %}
+                <li class="offset-1 col-9 ausente">
+            {% endif %}
+                        <span><a href="/reuniao/{{reuniao.id}}">{{reuniao.name}}</a></span>
+                        <span>{{reuniao.serie}}</span>
+                        <span>{{reuniao.turma}}</span>
+                        <span>{{reuniao.ausente}}</span>
+                        <a href="save/{{reuniao.id}}"><span><i class='fas fa-check'></i></span></a>
+                    </li>
+            {% endfor %}
+            </ul>
+     </div>
+
+
+
+{% endblock %}

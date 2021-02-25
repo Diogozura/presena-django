@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Presença{% endblock %}
+
+{% block content %}
+    <div class="offset-1 col-10 list-div">
+        <h1>{{reuniao.name}}</h1>
+        <p>Tutor : {{reuniao.tutor}}</p>
+        <p>preseça : {{reuniao.ausente}}</p>
+     </div>
+{% endblock %}

@@ -1,0 +1,124 @@
+.container-fluid {
+    padding: 0;
+}
+
+.container-fluid .row {
+    margin: 0;
+}
+
+/* Navbar */
+
+.navbar  {
+    border-bottom: 1px solid rgb(133, 131, 131);
+    margin-bottom: 20px;
+}
+
+.navbar-nav {
+    margin: auto;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav a.nav-link {
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/* Lista de alunos */
+.list-div {
+    padding: 0;
+}
+
+.lists {
+    line-height: none;
+    padding-left: 0;      
+}
+
+.alunos {
+    list-style: none;
+    font-size: 15px;
+    height: 50px;
+    padding: 0 15;
+    padding-top: 10px;
+    border: 1px dashed #000000;
+}
+
+.ausente {
+    list-style: none;
+    font-size: 15px;
+    height: 50px;
+    padding-top: 20px;
+    border: 1px dashed rgb(248, 6, 6);
+    background-color: #86f7b1;
+}
+
+.fas fa-check {
+    cursor: pointer;    
+    margin: 5px;
+    font-size: 20px;    
+    float: right;
+    color: #3476e2;
+}
+
+.presenca .fas fa-check{
+    color: #34e277;
+}
+
+/* Search */
+
+.fas.fa-search {
+    position: absolute;
+    top: 12px;
+    right: 26px;
+    cursor: pointer;
+}
+
+.search-div {
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/* filter */
+.filter-div {
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.filter {
+    display: inline-block;
+    width: 200px;
+    margin-left: 10px;
+}
+
+/* Rodapé */
+
+footer {
+    background-color: #333;
+    height: 300px;
+    border-top: 2px solid #202020;
+}
+
+footer p {
+    color: #f5f5f5;
+    text-align: center;
+    top: 50%;
+    position: relative;
+}
+
+/* messages */
+ul.messages {
+    padding: 0;
+}
+
+ul.messages li {
+    list-style: none    ;
+}
+
+/* login */
+.auth-card {
+    margin-bottom: 30px;
+}
